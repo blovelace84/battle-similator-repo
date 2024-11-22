@@ -1,0 +1,107 @@
+.main-container{
+  background: linear-gradient(135deg, #000f1c, #001f3f);
+  background-image: url('space-texture.jpg'); /* Add a subtle space-themed texture */
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.title-container{
+  margin: 20px 0;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif; /* Or another space-themed font */
+  font-size: 2rem;
+  text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff;
+}
+
+.game-container{
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+  width: 100%;
+}
+
+.player, .attack, .enemy{
+  display: flex;
+  align-items: center;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  height: 30vh;
+}
+
+.player{
+  color: #4b0082;
+  font-weight: bold;
+}
+
+.enemy{
+  color: crimson;
+  font-weight: bold;
+  animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+  0%, 100% {
+    transform: scale(1);
+    background-color: red;
+  }
+  50% {
+    transform: scale(1.1);
+    background-color: darkred;
+  }
+}
+
+.score{
+  display: inline-block;
+  width: 50px;
+}
+
+.attack button, .restart button{
+  width: 120px;
+  height: 120px;
+  color: white;
+  border: 10px solid blue;
+  border-radius: 50%;
+  background-color: greenyellow;
+  box-shadow: 0 0 10px greenyellow, 0 0 20px greenyellow;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.attack button:hover{
+  transform: scale(1.1);
+  box-shadow: 0 0 15px yellow, 0 0 30px yellow;
+}
+
+.restart button{
+  border-color: yellow;
+  background-color: transparent;
+  box-shadow: 0 0 10px yellow, 0 0 20px yellow;
+}
+
+.restart button:hover{
+  transform: scale(1.1);
+  box-shadow: 0 0 15px red, 0 0 30px red;
+}
+
+.message-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  margin: 50px 0;
+  text-align: center;
+  border: 2px solid white;
+  background: rgba(255, 255, 255, 0.1);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
